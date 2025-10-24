@@ -5,7 +5,7 @@ const instructions = $("#instructions");
 const KEY = "sumFlowItems";
 
 $("#btnGenerate")?.addEventListener("click", () => {
-  const n = parseInt(numInput?.value, 10);
+  const n = Number(numInput?.value);
   if (!n || n < 1) return;
   itemsDiv.innerHTML = "";
   const values = [];
@@ -24,7 +24,7 @@ $("#btnToggleInstructions")?.addEventListener("click", () => {
   instructions?.classList.toggle("hidden");
 });
 
-$("#btnContinue")?.addEventListener("click", () => {
+$("#btnAdd")?.addEventListener("click", () => {
   window.location.href = "../summary/summary.html";
 });
 
